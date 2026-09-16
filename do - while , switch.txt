@@ -17,5 +17,5 @@ void main() {
   do {
   print ("This is dart");
     x--;
-  }  while (x<=40);
+  }  while (x>=44);
   }
