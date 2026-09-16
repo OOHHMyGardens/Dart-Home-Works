@@ -1,0 +1,21 @@
+void main() {
+  int x = 44;
+  switch(x){
+    case 40:
+  print ("OH NO");
+      break;
+    case 44:
+  print ("Good");
+      break;
+    case 1:
+  print("What ");
+      break;
+    case 3:
+      print("Yes");
+      break;
+  }
+  do {
+  print ("This is dart");
+    x--;
+  }  while (x<=40);
+  }
