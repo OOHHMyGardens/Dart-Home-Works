@@ -1,0 +1,256 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(Homework());
+}
+
+class Homework extends StatelessWidget {
+  const new({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(
+          color: Color(0xFF5E5CE6),
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontWeight: .bold,
+            fontSize: 20,
+          ),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          hintStyle: TextStyle(color: Colors.grey[500]),
+        ),
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          leading: Icon(Icons.search, color: Colors.white, size: 30),
+          title: Text("My Notes"),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            spacing: 10,
+            mainAxisAlignment: .center,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: Color(0xFF5E5CE6),
+                ),
+                width: double.infinity,
+                height: 160,
+                child: Padding(
+                  padding: .only(left: 20, top: 30),
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: .topLeft,
+                        child: Text(
+                          "Small steps",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                      ),
+                      Align(
+                        alignment: .topLeft,
+                        child: Text(
+                          "every day lead to",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                      ),
+                      Align(
+                        alignment: .topLeft,
+                        child: Text(
+                          "big results",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Keep going!",
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                          Icon(Icons.rocket, color: Colors.white, size: 15),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              Align(
+                alignment: .centerLeft,
+                child: Text(
+                  "Add a New Note",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: .bold,
+                  ),
+                ),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  hint: Row(
+                    spacing: 10,
+                    children: [
+                      Icon(Icons.description, color: Colors.grey),
+                      Text("Title", style: TextStyle(color: Colors.grey)),
+                    ],
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  hint: Row(
+                    spacing: 10,
+                    children: [
+                      Icon(Icons.edit, color: Colors.grey),
+                      Text(
+                        "Write your note here...",
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+              ),
+              MaterialButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadiusGeometry.circular(8),
+                ),
+                color: Color(0xFF5E5CE6),
+                onPressed: () {},
+                child: Row(
+                  mainAxisAlignment: .center,
+                  children: [
+                    Icon(Icons.add, color: Colors.white),
+                    Text("Add Note", style: TextStyle(color: Colors.white)),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  Text("Your Notes"),
+                  Expanded(child: SizedBox(width: 1500, height: 10)),
+                  Text("3 notes"),
+                ],
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.lightBlueAccent,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                width: double.infinity,
+                height: 100,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    spacing: 10,
+                    children: [
+                      Row(
+                        spacing: 20,
+                        children: [
+                          Icon(Icons.description),
+                          Text("Learn Flutter"),
+                          Expanded(child: SizedBox(width: 1500, height: 10)),
+                          Icon(Icons.more_vert),
+                        ],
+                      ),
+                      Align(
+                        alignment: .centerLeft,
+                        child: Text(
+                          "           Practice widgets and build real apps",
+                        ),
+                      ),
+                      Align(
+                        alignment: .centerLeft,
+                        child: Text("           Apr 23, 2025"),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.lightGreen,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                width: double.infinity,
+                height: 100,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    spacing: 10,
+                    children: [
+                      Row(
+                        spacing: 20,
+                        children: [
+                          Icon(Icons.description),
+                          Text("Study Dart"),
+                          Expanded(child: SizedBox(width: 1500, height: 10)),
+                          Icon(Icons.more_vert),
+                        ],
+                      ),
+                      Align(
+                        alignment: .centerLeft,
+                        child: Text(
+                          "           Focus on functions and collections",
+                        ),
+                      ),
+                      Align(
+                        alignment: .centerLeft,
+                        child: Text("           Apr 22, 2025"),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.orange,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                width: double.infinity,
+                height: 100,
+                child: Column(
+                  spacing: 10,
+                  children: [
+                    Row(
+                      spacing: 20,
+                      children: [
+                        Icon(Icons.description),
+                        Text("Build Projects"),
+                        Expanded(child: SizedBox(width: 1500, height: 10)),
+                        Icon(Icons.more_vert),
+                      ],
+                    ),
+                    Align(
+                      alignment: .centerLeft,
+                      child: Text(
+                        "           Create usefull and beautiful apps",
+                      ),
+                    ),
+                    Align(
+                      alignment: .centerLeft,
+                      child: Text("           Apr 20, 2025"),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
