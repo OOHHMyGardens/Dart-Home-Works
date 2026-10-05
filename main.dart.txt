@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:together/logic.dart';
+
+import 'todo.dart';
+
+void main() {
+  runApp(TodoProject());
+}
+
+class TodoProject extends StatefulWidget {
+  const new({super.key});
+
+  @override
+  State<TodoProject> createState() => _TodoProjectState();
+}
+
+class _TodoProjectState extends State<TodoProject> {
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => TodoLogic(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: "/",
+        routes: {"/": (context) => FirstProject()},
+      ),
+    );
+  }
+}
